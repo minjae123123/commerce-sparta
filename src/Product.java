@@ -15,31 +15,15 @@ public class Product {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getPrice() {
         return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 
     public String getExplanation() {
         return explanation;
     }
 
-    public void setExplanation(String explanation) {
-        this.explanation = explanation;
-    }
-
     public int getStock_quantity() {
         return stock_quantity;
-    }
-
-    public void setStock_quantity(int stock_quantity) {
-        this.stock_quantity = stock_quantity;
     }
 }
