@@ -69,8 +69,8 @@ public class CommerceSystem {
                         System.out.println("아래와 같이 주문하시겠습니까?");
                         System.out.println("[장바구니 내역]");
                         for (Product cart : carts) {
-                            System.out.println(cart.getName() + " | " + cart.getPrice() + " | " + cart.getExplanation());
-                            sum += cart.getPrice();
+                            System.out.println(cart.getName() + " | " + cart.getPrice() + " | " + cart.getExplanation() + " | 수량: " + cart.getCartCount());
+                            sum += cart.getPrice() * cart.getCartCount();
                         }
 
                         System.out.println("[총 주문 금액]");
@@ -92,8 +92,9 @@ public class CommerceSystem {
                                 } else {
                                     System.out.println(cart.getName() + "은(는) 재고가 없습니다.");
                                 }
+                                cart.setCartCount(0);
+                                carts.clear();
                             }
-                            carts.clear();
                         }
                         break;
 
@@ -155,8 +156,14 @@ public class CommerceSystem {
         int addCart = scanner.nextInt();
 
         if (addCart == 1) {
+            if(carts.contains(p)) {
+                p.setCartCount(p.getCartCount() + 1);
+            } else {
+                p.setCartCount(1);
+                carts.add(p);
+            }
+
             System.out.println(p.getName() + "가 장바구니에 추가되었습니다.");
-            carts.add(p);
         }
     }
 }

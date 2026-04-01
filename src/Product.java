@@ -4,6 +4,11 @@ public class Product {
     private int price;
     private String explanation;
     private int stock_quantity;
+    private int cartCount;
+
+    public void setCartCount(int cartCount) {
+        this.cartCount = cartCount;
+    }
 
     public Product(String category, String name, int price, String explanation, int stock_quantity) {
         this.category = category;
@@ -31,6 +36,10 @@ public class Product {
 
     public int getStock_quantity() {
         return stock_quantity;
+    }
+
+    public int getCartCount() {
+        return cartCount;
     }
 
     public void setCategory(String category) {
