@@ -10,14 +10,6 @@ JAVA 커머스 콘솔 앱
 - 관리자 인증 후 상품 추가, 수정, 삭제 기능을 구현
 
 파일 구조
-/src
-├── Admin.java
-├── Cart.java
-├── Category.java
-├── CommerceSystem.java
-├── Main.java
-├── Product.java
-
 - Admin.java : 관리자 인증, 관리자 메뉴 흐름 담당
 - Cart.java : 장바구니 항목 관리
 - Category.java : 카테고리/상품 조회
